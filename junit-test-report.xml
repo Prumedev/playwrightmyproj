@@ -1,0 +1,53 @@
+<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="37.023025000000004">
+<testsuite name="hrmtest.spec.ts" timestamp="2025-04-29T22:45:20.360Z" hostname="Google Chrome" tests="3" failures="1" skipped="0" time="52.279" errors="0">
+<testcase name="My hrm invalid test valid msg" classname="hrmtest.spec.ts" time="4.986">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\hrmtest-My-hrm-invalid-test-valid-msg-Google-Chrome\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="My hrm invalid test invalid msg" classname="hrmtest.spec.ts" time="30.342">
+<failure message="hrmtest.spec.ts:19:5 My hrm invalid test invalid msg" type="FAILURE">
+<![CDATA[  [Google Chrome] › hrmtest.spec.ts:19:5 › My hrm invalid test invalid msg ─────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(locator).toBeVisible()
+
+    Locator: getByText('Invalid credential', { exact: true })
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for getByText('Invalid credential', { exact: true })
+
+
+      26 |     await page.getByRole('button', { name: 'Login' }).click();
+      27 |     //validate message
+    > 28 |     await expect(page.getByText('Invalid credential', {exact: true})).toBeVisible();
+         |                                                                       ^
+      29 | })
+      30 |
+      31 | //write test valid credentials
+        at C:\Users\FATHIMA\playwright_proj\tests\hrmtest.spec.ts:28:71
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\hrmtest-My-hrm-invalid-test-invalid-msg-Google-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\hrmtest-My-hrm-invalid-test-invalid-msg-Google-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\hrmtest-My-hrm-invalid-test-invalid-msg-Google-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\hrmtest-My-hrm-invalid-test-invalid-msg-Google-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="My hrm valid test" classname="hrmtest.spec.ts" time="16.951">
+</testcase>
+</testsuite>
+</testsuites>

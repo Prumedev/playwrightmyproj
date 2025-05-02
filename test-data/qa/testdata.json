@@ -1,0 +1,11 @@
+{
+    "hrminv":{
+        "un": "adm",
+        "pw": "adm"
+    },
+
+    "hrmval":{
+        "un": "admin",
+        "pw": "admin123"
+    }
+}

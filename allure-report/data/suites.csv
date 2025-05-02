@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","4643","Mouse clicks","Google Chrome","Tue Apr 29 18:19:51 MDT 2025","passed","Tue Apr 29 18:19:56 MDT 2025","","mouseclicks.spec.ts","",""
+"","9080","screenshot comparision","Google Chrome","Tue Apr 29 18:19:56 MDT 2025","failed","Tue Apr 29 18:20:05 MDT 2025","","scrshottest.spec.ts","",""
+"","13150","First browser","Google Chrome","Tue Apr 29 18:19:55 MDT 2025","passed","Tue Apr 29 18:20:08 MDT 2025","","multibrowtabs.spec.ts","",""
+"","4916","iframe datapicker tests","Google Chrome","Tue Apr 29 18:19:49 MDT 2025","passed","Tue Apr 29 18:19:54 MDT 2025","","datepicker.spec.ts","",""
+"","3096","iframe drag and drop tests","Google Chrome","Tue Apr 29 18:19:48 MDT 2025","passed","Tue Apr 29 18:19:51 MDT 2025","","iframedragdrop.spec.ts","",""
+"","4206","element comparision","Google Chrome","Tue Apr 29 18:20:08 MDT 2025","failed","Tue Apr 29 18:20:12 MDT 2025","","scrshottest.spec.ts","",""
