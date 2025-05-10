@@ -1,0 +1,20 @@
+POST Response is{
+  "bookingid": 110,
+  "booking": {
+    "firstname": "Celestino",
+    "lastname": "Luettgen",
+    "totalprice": 4651,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-01",
+      "checkout": "2025-01-05"
+    },
+    "additionalneeds": "macroni"
+  }
+}
+Booking id is: 110
+GET Response is[
+  {
+    "bookingid": 110
+  }
+]

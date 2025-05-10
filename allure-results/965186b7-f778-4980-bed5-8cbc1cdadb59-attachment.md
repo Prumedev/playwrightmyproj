@@ -1,0 +1,100 @@
+# Test info
+
+- Name: PO-My hrm invalid test invalid msg
+- Location: C:\Users\FATHIMA\playwright_proj\tests\hrmPO.spec.ts:6:5
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 3000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Login' })
+    - locator resolved to <button type="submit" data-v-10d463b7="" data-v-0af708be="" class="oxd-button oxd-button--medium oxd-button--main orangehrm-login-button">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+
+    at HomePage.logIn (C:\Users\FATHIMA\playwright_proj\src\pages\homepage.ts:34:27)
+    at C:\Users\FATHIMA\playwright_proj\tests\hrmPO.spec.ts:11:5
+```
+
+# Page snapshot
+
+```yaml
+- img "company-branding"
+- heading "Login" [level=5]
+- paragraph: "Username : Admin"
+- paragraph: "Password : admin123"
+- text:  Username
+- textbox "Username": adm
+- text:  Password
+- textbox "Password": adm
+- button "Login"
+- paragraph: Forgot your password?
+- separator
+- paragraph: Or login with
+- paragraph: Testin Social Media
+- link:
+  - /url: https://www.linkedin.com/company/orangehrm/mycompany/
+- link:
+  - /url: https://www.facebook.com/OrangeHRM/
+- link:
+  - /url: https://twitter.com/orangehrm?lang=en
+- link:
+  - /url: https://www.youtube.com/c/OrangeHRMInc
+- paragraph: OrangeHRM OS 5.7
+- paragraph:
+  - text: © 2005 - 2025
+  - link "OrangeHRM, Inc":
+    - /url: http://www.orangehrm.com
+  - text: . All rights reserved.
+- img "orangehrm-logo"
+```
+
+# Test source
+
+```ts
+   1 | import { Locator, Page, expect } from "playwright/test";
+   2 |
+   3 | export class HomePage{
+   4 |     readonly page : Page;
+   5 |     readonly BRAND : Locator;
+   6 |     readonly unTxt : Locator;
+   7 |     readonly pwtxt : Locator;
+   8 |     readonly lgibtn : Locator;
+   9 |     readonly valmsg : Locator;
+  10 |     
+  11 |     constructor(page:Page) {
+  12 |         this.page = page;
+  13 |
+  14 |         this.BRAND = page.getByRole('img', { name: 'company-branding' });
+  15 |         // this.unTxt = page.locator('//input[@name="username"]');
+  16 |         this.unTxt = page.getByRole('textbox', { name: 'Username' });
+  17 |         this.pwtxt = page.getByRole('textbox', { name: 'Password' });
+  18 |         this.lgibtn = page.getByRole('button', { name: 'Login' });
+  19 |         this.valmsg = page.getByText('Invalid credentials', {exact: true});
+  20 |         // this.invalmsg = this.page.getByText('Invalid credential', {exact: true});
+  21 |     }
+  22 |
+  23 |     async goToURL(url: string) {
+  24 |         await this.page.goto(url);
+  25 |         await expect (this.BRAND).toBeVisible();
+  26 |     }
+  27 |
+  28 |     async logIn(un:string, pw:string) {
+  29 |         //enter un and pw
+  30 |         await this.unTxt.click();
+  31 |         await this.unTxt.fill(un);
+  32 |         await this.pwtxt.fill(pw);
+  33 |         //press login
+> 34 |         await this.lgibtn.click({timeout: 3000});
+     |                           ^ TimeoutError: locator.click: Timeout 3000ms exceeded.
+  35 |     }
+  36 |
+  37 |     async checkMsg(msg:string) {
+  38 |         //this.msg1 = msg;
+  39 |         //validate message
+  40 |         //this.val_msg = this.page.getByText(msg, {exact: true});
+  41 |         await expect(this.valmsg).toBeVisible();
+  42 |     }
+  43 | }
+```

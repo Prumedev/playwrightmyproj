@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import EXCEL from 'xlsx';
 import { parse } from 'csv-parse/sync';
-const FilePath = path.join(__dirname, '../test-data/qa/testdata.xlsx');
+const FilePath = path.join(__dirname, '../../test-data/qa/testdata.xlsx');
 const file = fs.readFileSync(FilePath);
 const wb = EXCEL.read(file);
 const sh = wb.Sheets[wb.SheetNames[0]];

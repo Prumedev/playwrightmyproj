@@ -1,0 +1,38 @@
+POST Response is{
+  "bookingid": 602,
+  "booking": {
+    "firstname": "Julian",
+    "lastname": "Hahn",
+    "totalprice": 3610,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-01",
+      "checkout": "2025-01-05"
+    },
+    "additionalneeds": "macroni"
+  }
+}
+Booking id is: 602
+GET Response is{
+  "firstname": "Julian",
+  "lastname": "Hahn",
+  "totalprice": 3610,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-01",
+    "checkout": "2025-01-05"
+  },
+  "additionalneeds": "macroni"
+}
+Token is : f8cd7288bd52483
+PUT Response is{
+  "firstname": "Specflow",
+  "lastname": "Selenium C#",
+  "totalprice": 111,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2018-01-01",
+    "checkout": "2019-01-01"
+  },
+  "additionalneeds": "super bowls"
+}

@@ -1,0 +1,26 @@
+Response is{
+  "bookingid": 490,
+  "booking": {
+    "firstname": "Gunnar",
+    "lastname": "Greenfelder",
+    "totalprice": 8141,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-01",
+      "checkout": "2025-01-05"
+    },
+    "additionalneeds": "macroni"
+  }
+}
+Booking id is: 490
+Response is{
+  "firstname": "Gunnar",
+  "lastname": "Greenfelder",
+  "totalprice": 8141,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-01",
+    "checkout": "2025-01-05"
+  },
+  "additionalneeds": "macroni"
+}

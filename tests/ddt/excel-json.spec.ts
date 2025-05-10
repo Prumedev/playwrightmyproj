@@ -1,13 +1,12 @@
 import { test, expect } from '@playwright/test';
-import fs from 'fs';
 import path from 'path';
-import { parse } from 'csv-parse/sync';
-const csvFilePath = path.join(__dirname, '../test-data/qa/testdata.csv');
-const csvData = fs.readFileSync(csvFilePath, 'utf8');
-const testData = parse(csvData, { columns: true, skip_empty_lines: true });
+import { readexcel } from '../../src/utilities/excelhelp';
 
-for (const row of testData) {
-    test('csv data test : '+ row.un, async ({ page }) => {
+const filepath = path.join(__dirname, '../../test-data/qa/testdata.xlsx');
+const records = readexcel(filepath);
+
+for (const row of records) {
+    test('excel to json data test : '+ row.un, async ({ page }) => {
         await page.goto(''+process.env.HRM_URL);
         //enter un and pw
         await page.getByRole('textbox', { name: 'Username' }).fill(row.un);

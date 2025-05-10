@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import path from 'path'; 
-const jsonFilePath = path.join(__dirname, '../test-data/qa/testdata.json');
+const jsonFilePath = path.join(__dirname, '../../test-data/qa/testdata.json');
 const csvData = fs.readFileSync(jsonFilePath, 'utf8');
 const testData = JSON.parse(csvData); 
 type td= {
