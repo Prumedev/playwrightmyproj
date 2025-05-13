@@ -53,7 +53,7 @@ test('iframe datapicker tests', {tag : ['@smoke']}, async ({ page }, testInfo) =
     await page.close();
 });
 
-test('iframe datapicker tests dup', {tag : ['@reg']}, async ({ page }, testInfo) => {
+test('iframe datapicker tests dup', {tag : ['@smoke', '@reg']}, async ({ page }, testInfo) => {
     await page.goto('https://jqueryui.com/datepicker/');
     //console.log('opened site');
     //await page.screenshot({path : './Screenshots/beforedrag.png'});

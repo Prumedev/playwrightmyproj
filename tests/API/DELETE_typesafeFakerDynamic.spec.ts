@@ -9,7 +9,7 @@ test.use({
     baseURL: process.env.BASE_API_URL,
 })
 
-test('Typesafe, Faker, dynamic - PATCH API for firstname ', async ({ request }) => {
+test('Typesafe, Faker, dynamic - PATCH API for firstname ', {tag : ['@smoke', '@apidel']}, async ({ request }) => {
     const fn = faker.person.firstName();
     const ln = faker.person.lastName();
     const totprice = faker.number.int({ min: 1000, max: 10000 });

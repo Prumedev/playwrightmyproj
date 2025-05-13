@@ -1,0 +1,39 @@
+POST Response is : {
+  "bookingid": 1444,
+  "booking": {
+    "firstname": "Aliyah",
+    "lastname": "Donnelly",
+    "totalprice": 8675,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-01",
+      "checkout": "2025-01-05"
+    },
+    "additionalneeds": "macroni"
+  }
+}
+Booking id is: 1444
+GET Response is : {
+  "firstname": "Aliyah",
+  "lastname": "Donnelly",
+  "totalprice": 8675,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-01",
+    "checkout": "2025-01-05"
+  },
+  "additionalneeds": "macroni"
+}
+Token is : 8e53c7a864b780a
+Patch Response is : {
+  "firstname": "patch",
+  "lastname": "Donnelly",
+  "totalprice": 8675,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-01",
+    "checkout": "2025-01-05"
+  },
+  "additionalneeds": "macroni"
+}
+Delete Response is : Created

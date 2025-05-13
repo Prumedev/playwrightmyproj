@@ -28,7 +28,7 @@ test('Mouse clicks', {tag : ['@smoke']}, async ({ page }, testInfo) => {
   page.close();
 });
 
-test('Mouse clicks dup', {tag : ['@reg']}, async ({ page }, testInfo) => {
+test('Mouse clicks dup', {tag : ['@smoke', '@reg']}, async ({ page }, testInfo) => {
 
   await page.goto('https://github.com/Prumedev');
   //await page.press('body', 'F5');

@@ -30,7 +30,7 @@ export default defineConfig({
     // ['list'],
     // ['dot'],
     // ['json', {outputFile: 'jsone-test-report.json'}],
-    // ['junit', {outputFile: 'junit-test-report.xml'}],
+    ['junit', {outputFile: 'junit-test-report.xml'}],
     ['allure-playwright'],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -82,7 +82,7 @@ export default defineConfig({
     // },
     {
       name: 'Google Chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome', viewport: {width:1920, height:1080}},
+      use: { ...devices['Desktop Chrome'], channel: 'chrome', viewport: {width:1440, height:900}},
     },
   ],
 

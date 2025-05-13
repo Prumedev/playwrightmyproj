@@ -1,0 +1,39 @@
+POST Response is : {
+  "bookingid": 3183,
+  "booking": {
+    "firstname": "Milan",
+    "lastname": "Flatley",
+    "totalprice": 1932,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-01",
+      "checkout": "2025-01-05"
+    },
+    "additionalneeds": "macroni"
+  }
+}
+Booking id is: 3183
+GET Response is : {
+  "firstname": "Milan",
+  "lastname": "Flatley",
+  "totalprice": 1932,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-01",
+    "checkout": "2025-01-05"
+  },
+  "additionalneeds": "macroni"
+}
+Token is : c64ca77f3147cbd
+Patch Response is : {
+  "firstname": "patch",
+  "lastname": "Flatley",
+  "totalprice": 1932,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-01",
+    "checkout": "2025-01-05"
+  },
+  "additionalneeds": "macroni"
+}
+Delete Response is : Created

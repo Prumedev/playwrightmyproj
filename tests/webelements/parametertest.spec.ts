@@ -4,7 +4,7 @@ const dates = ['07/06/2024', '07/07/2024', '07/08/2024']
 
 for (const pdate of dates) {
 
-  test('test' + pdate, { tag: ['@reg'] }, async ({ page }, testInfo) => {
+  test('test' + pdate, { tag: ['@smoke', '@reg'] }, async ({ page }, testInfo) => {
 
   //test('tests parameterzation ${pdate}', { tag: ['@reg'] }, async ({ page }, testInfo) => {
 
