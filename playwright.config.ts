@@ -82,7 +82,7 @@ export default defineConfig({
     // },
     {
       name: 'Google Chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome', viewport: {width:1440, height:900}},
+      use: { ...devices['Desktop Chrome'], channel: 'chrome', viewport: {width:1920, height:1080}},
     },
   ],
 
